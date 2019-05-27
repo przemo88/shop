@@ -2,11 +2,11 @@ import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import { MainLayout } from "./components/MainLayout";
-import { Root } from "./components/Root";
-import { Home } from "./components/Home";
-import { User } from "./components/User";
-import {NoMatch} from "./components/NoMatch";
+import { MainLayout } from "./components/MainLayout/MainLayout";
+import { Home } from "./components/Home/Home";
+import {NoMatch} from "./components/NoMatch/NoMatch";
+import { ProductDetails } from "./components/ProductList/ProductDetails";
+import { Products } from "./components/Products/Products";
 
 
 class App extends React.Component {
@@ -15,9 +15,10 @@ class App extends React.Component {
       <BrowserRouter>
        <MainLayout>
           <Switch>
-            <Route exact path={"/"} component={Root} />
+            <Route exact path={"/"} component={Home} />
             <Route exact path={"/home"} component={Home} />
-            <Route exact path={"/user"} component={User} />
+            <Route exact path={"/product"} component={Products}/>
+            <Route exact path={"/product/:id"} component={ProductDetails} />
             <Route component={NoMatch} />
           </Switch>
           </MainLayout>

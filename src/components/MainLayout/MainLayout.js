@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header } from "./Header/header";
+import  Header  from "../Header/header";
 
 export class MainLayout extends React.Component {
   render() {

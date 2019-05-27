@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import ProductDetails from '../ProductList/ProductList';
 
 const Product = ({title, image, price, alt}) => (
     <div>
@@ -9,11 +9,5 @@ const Product = ({title, image, price, alt}) => (
     </div>
 )
 
-Product.propTypes = {
-    title: PropTypes.string,
-    image: PropTypes.string,
-    description: PropTypes.string,
-    alt: PropTypes.string
-}
 
 export default Product;
