@@ -7,15 +7,15 @@ const Header = props => {
   return (
     <div>
       <nav>
-        <div>Navbar</div>
-        <NavLink exact to="/" activeClassName="active">
-          Root
-        </NavLink>
+        <div>PetaBajt</div>
         <NavLink exact to="/home" activeClassName="active">
           Home
         </NavLink>
-        <NavLink exact to="/user" activeClassName="active">
-          User
+        <NavLink exact to="/faq" activeClassName="active">
+          Faq
+        </NavLink>
+        <NavLink exact to="/regulations" activeClassName="active">
+          Regulamin
         </NavLink>
       </nav>
     </div>
