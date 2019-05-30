@@ -1,18 +1,20 @@
 import React from 'react';
 import {ProductDetails} from '../ProductList/ProductDetails';
-import {ProductList} from '../ProductList/ProductList';
-
+//import {ProductList} from '../ProductList/ProductList';
+import { connect } from 'react-redux';
 export class Products extends React.Component{
         constructor(props){
                 super(props);
-                this.elements = this.props;
+                this.state = {
+                };
+               
         }
 
         render(){
                 return(
                         <div>
                                 {
-                                ProductList.map((productDet,a) => (
+                                (this.props.produkty).map((productDet,a) => (
                                         <ProductDetails
                                         key = {a}
                                         index = {a}
@@ -28,3 +30,11 @@ export class Products extends React.Component{
                 )
         }
 }
+
+function mapStateToProps(state) {
+        return {
+            produkty: state.produkty
+        }
+    }
+    
+export default connect(mapStateToProps)(Products);

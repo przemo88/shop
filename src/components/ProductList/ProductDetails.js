@@ -1,9 +1,7 @@
 import React from 'react';
-import { NavLink} from 'react-router-dom';
-
+import {NavLink} from 'react-router-dom';
 
 export const ProductDetails = (props) => (
-    
     <>
     <NavLink
         exact to={"/product/" + props.index}> {props.id}
@@ -12,9 +10,7 @@ export const ProductDetails = (props) => (
         <p>{props.price}</p>
   
     </NavLink>
-    <div>sdsd</div>
 
     </>
- 
+    
 );
-

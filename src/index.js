@@ -3,13 +3,15 @@ import { render } from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import { MainLayout } from "./components/MainLayout/MainLayout";
-import { Home } from "./components/Home/Home";
+import  Home  from "./components/Home/Home";
 import {NoMatch} from "./components/NoMatch/NoMatch";
 import { ProductDetails } from "./components/ProductList/ProductDetails";
 import { Products } from "./components/Products/Products";
 import { Faq } from "./components/Faq/faq";
 import { Regulations } from "./components/Regulations/Regulations";
 import { Footer } from "./components/Footer/Footer";
+
+
 class App extends React.Component {
   render() {
     return (

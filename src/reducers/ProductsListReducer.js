@@ -1,5 +1,6 @@
-export const ProductList = [
-    {
+export default function () {
+    return [
+        {
         id: 0,
         title: 'GeForce 1550',
         image: 'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2019/2/pr_2019_2_18_14_33_9_864_05.jpg',

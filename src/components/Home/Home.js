@@ -1,8 +1,26 @@
 import React from "react";
 import { Products } from '../Products/Products';
+import { connect } from 'react-redux';
 
-export class Home extends React.Component {
+class Home extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+        "produkty": this.props.produkty
+    };
+}
+
   render() {
     return <div><Products/></div>
   }
 } 
+
+function mapStateToProps(state) {
+  return {
+      produkty: state.produkty
+  }
+}
+
+
+export default connect(mapStateToProps)(Home);
