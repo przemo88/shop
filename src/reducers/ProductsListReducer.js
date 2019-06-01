@@ -2,7 +2,7 @@ export default function () {
     return [
         {
         id: 0,
-        title: 'GeForce 1550',
+        title: 'GeForce 155000000000000',
         image: 'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2019/2/pr_2019_2_18_14_33_9_864_05.jpg',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis dui leo, ut mollis nisi vestibulum vitae',
         alt: 'GeForce 1550',
@@ -41,4 +41,5 @@ export default function () {
         price: 3550,
     }
 ]
+};
 

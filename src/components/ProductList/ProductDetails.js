@@ -2,7 +2,6 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 export const ProductDetails = (props) => (
-    <>
     <NavLink
         exact to={"/product/" + props.index}> {props.id}
         <img src={props.image} alt="products" />
@@ -10,7 +9,5 @@ export const ProductDetails = (props) => (
         <p>{props.price}</p>
   
     </NavLink>
-
-    </>
     
 );

@@ -12,7 +12,9 @@ class Home extends React.Component {
 }
 
   render() {
-    return <div><Products/></div>
+    return(
+     <Products lista_produktow={this.state}/>
+    )
   }
 } 
 
