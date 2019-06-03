@@ -17,6 +17,9 @@ const Header = props => {
         <NavLink exact to="/regulations" activeClassName="active">
           Regulamin
         </NavLink>
+        <NavLink exact to="/contact" activeClassName="active">
+          Kontakt
+        </NavLink>
       </nav>
     </div>
   );
