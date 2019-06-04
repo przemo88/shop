@@ -1,27 +1,40 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import "./header.css";
+
+
+function myFunction() {
+ var element = document.getElementsByClassName("nav-link");
+  element.classList.toggle("active");
+  alert(element);
+}
+
+
 
 const Header = props => {
   return (
-    <div>
-      <nav>
-        <div>PetaBajt</div>
-        <NavLink exact to="/home" activeClassName="active">
-          Home
-        </NavLink>
-        <NavLink exact to="/faq" activeClassName="active">
-          Faq
-        </NavLink>
-        <NavLink exact to="/regulations" activeClassName="active">
-          Regulamin
-        </NavLink>
-        <NavLink exact to="/contact" activeClassName="active">
-          Kontakt
-        </NavLink>
-      </nav>
-    </div>
+      <ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+      <NavLink exact to="/" className="nav-link">
+          <div>Home</div>
+      </NavLink>
+  </li>
+  <li class="nav-item">
+      <NavLink exact to="/faq" className="nav-link">
+          <div>Faq</div>
+      </NavLink>
+  </li>
+  <li class="nav-item">
+      <NavLink exact to="/regulations" className="nav-link">
+          <div>Regulamin</div>
+      </NavLink>
+  </li>
+  <li class="nav-item">
+      <NavLink exact to="/contact" className="nav-link">
+          <div>Kontakt</div>
+      </NavLink>
+  </li>
+</ul>
   );
 };
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Products } from '../Products/Products';
 import { connect } from 'react-redux';
+import styles from './Home.css';
 
 class Home extends React.Component {
 
@@ -13,7 +14,11 @@ class Home extends React.Component {
 
   render() {
     return(
-     <Products lista_produktow={this.state}/>
+      <>
+        <Products lista_produktow={this.state}/>
+      </>
+
+
     )
   }
 } 

@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { MainLayout } from "./components/MainLayout/MainLayout";
 import  Home  from "./components/Home/Home";
 import {NoMatch} from "./components/NoMatch/NoMatch";
-import  ProductInfo from "./components/Products/ProductInfo";
+import  ProductInfo from "./components/ProductInfo/ProductInfo";
 import { Products } from "./components/Products/Products";
 import { Faq } from "./components/Faq/Faq";
 import { Regulations } from "./components/Regulations/Regulations";
