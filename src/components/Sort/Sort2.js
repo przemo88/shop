@@ -19,8 +19,8 @@ class Sort2 extends React.Component {
   {
     function change(a, b)
     {
-         var A = a.toLowerCase();
-         var B = b.toLowerCase();
+         var A = a.Name.toLowerCase();
+         var B = b.Name.toLowerCase();
          if (A > B){
             return 1;
          }else if (A < B){
@@ -41,7 +41,7 @@ class Sort2 extends React.Component {
   render() {
     return (
       <div className="container">
-        <Home data={this.Setstate.data} sortBy={this.sortBy2} />
+        <Home data={this.state.data} sortBy={this.sortBy2} />
       </div>
     );
   }
