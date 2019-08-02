@@ -1,32 +1,35 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { NavLink, BrowserRouter, Route } from "react-router-dom";
+import Faq from "../Faq/Faq";
+import data from "../../data/data";
 
-export class ProductInfo extends React.Component {
-    render() {
-        return (
-            <div >
-        
-                        <p>
-                            {this.props.produkty[this.props.match.params.id].id}
-                        </p>
-                        <img
-                         
-                            src={this.props.produkty[this.props.match.params.id].image}
-                           
-                        />
-                   </div>
-                    
-    
-        );
-    }
-};
+class ProductInfo extends Component {
+  constructor(props) {
+    super(props);
+  }
 
+  render() {
+    return (
+      <>
+        {data.map(row => (
+          <BrowserRouter>
+            <div>
+              <navbar>
+                <NavLink to={"/faq/" + row.id}>link</NavLink>
+                <br />
+              </navbar>
 
+              <Route path={"/faq/" + row.id} component={Faq} />
+              <p>{row.title}</p>
 
-function mapStateToProps(state) {
-    return {
-        produkty: state.produkty
-    }
+              <p>{row.price}</p>
+              <img src={row.image} />
+            </div>
+          </BrowserRouter>
+        ))}
+      </>
+    );
+  }
 }
 
-export default connect(mapStateToProps)(ProductInfo);
+export default ProductInfo;

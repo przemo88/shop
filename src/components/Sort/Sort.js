@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./components/Home";
+import Home from "../Home/Home";
 import data from "../../reducers/ProductsListReducer";
 
 class Sort extends React.Component {
