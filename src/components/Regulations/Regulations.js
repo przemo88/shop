@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Regulations = () => {
+const Regulations = () => {
   return (
     <section className="row">
       <div className="col-8 offset-2 mt-5">

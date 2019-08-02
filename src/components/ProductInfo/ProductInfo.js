@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { NavLink, BrowserRouter, Route } from "react-router-dom";
 import Faq from "../Faq/Faq";
 import data from "../../data/data";
+import styles from "./ProductInfo.css";
 
 class ProductInfo extends Component {
   constructor(props) {
@@ -11,19 +12,25 @@ class ProductInfo extends Component {
   render() {
     return (
       <>
-        {data.map(row => (
+        {data.map(props => (
           <BrowserRouter>
-            <div>
-              <navbar>
-                <NavLink to={"/faq/" + row.id}>link</NavLink>
-                <br />
-              </navbar>
-
-              <Route path={"/faq/" + row.id} component={Faq} />
-              <p>{row.title}</p>
-
-              <p>{row.price}</p>
-              <img src={row.image} />
+            <div className="product row">
+              <div className="col-4">
+                <img src={props.image} alt={props.title} className="img" />
+              </div>
+              <div className="col-8">
+                <navbar>
+                  <label>Model:</label>
+                  <NavLink to={"/faq/" + props.id}> {props.title} </NavLink>
+                  <br />
+                </navbar>
+                <Route path={"/faq/" + props.id} component={Faq} />
+                <p>
+                  <label>Cena:</label> {props.price} zł
+                </p>
+                <label>Opis:</label>
+                <div className="description">{props.description}</div>
+              </div>
             </div>
           </BrowserRouter>
         ))}

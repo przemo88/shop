@@ -1,6 +1,7 @@
-.footer-home{
-    position: relative;
-    left:0;
-    bottom:0;
-    right:0;
+.footer-home {
+  margin-top: 15px;
+  padding: 10px 0 0 10px;
+  margin-bottom: -10px;
+  color: blue;
+  text-decoration: underline;
 }

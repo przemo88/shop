@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ProductInfo from "../ProductInfo/ProductInfo";
 import data from "../../data/data";
+import styles from "./Home.css";
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -51,19 +52,19 @@ export default class Home extends Component {
   }
   render() {
     return (
-      <div className="Container">
-        <button onClick={() => this.sortBy("price", "asc")}>
+      <div className="Container row">
+        <p className="footer-home" onClick={() => this.sortBy("price", "asc")}>
           Cena rosnąco
-        </button>
-        <button onClick={() => this.sortBy("price", "desc")}>
+        </p>
+        <p className="footer-home" onClick={() => this.sortBy("price", "desc")}>
           Cena malejąco
-        </button>
-        <button onClick={() => this.sortBy("title", "asc")}>
-          Name rosnąco
-        </button>
-        <button onClick={() => this.sortBy("title", "desc")}>
-          Name malejąco
-        </button>
+        </p>
+        <p className="footer-home" onClick={() => this.sortBy("title", "asc")}>
+          Nazwa rosnąco
+        </p>
+        <p className="footer-home" onClick={() => this.sortBy("title", "desc")}>
+          Nazwa malejąco
+        </p>
 
         <ProductInfo data={this.state.data} sortBy={this.sortBy} />
       </div>
