@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { NavLink, BrowserRouter, Route } from "react-router-dom";
-import Faq from "../Faq/Faq";
+import { ProductDetails } from "../ProductDetails/ProductDetails";
 import data from "../../data/data";
 import styles from "./ProductInfo.css";
+import { connect } from 'react-redux';
+import { SingleProduct } from "../SingleProduct/SingleProduct";
 
 class ProductInfo extends Component {
   constructor(props) {
@@ -12,24 +14,24 @@ class ProductInfo extends Component {
   render() {
     return (
       <>
-        {data.map(props => (
+        {data.map(val => (
           <BrowserRouter>
             <div className="product row">
               <div className="col-4">
-                <img src={props.image} alt={props.title} className="img" />
+                <img src={val.image} alt={val.title} className="img" />
               </div>
               <div className="col-8">
                 <navbar>
                   <label>Model:</label>
-                  <NavLink to={"/faq/" + props.id}> {props.title} </NavLink>
+                  <NavLink to={"/product/" + val.id}> {val.title} </NavLink>
                   <br />
                 </navbar>
-                <Route path={"/faq/" + props.id} component={Faq} />
+                <Route path={"/product/" + val.id} component={SingleProduct} />
                 <p>
-                  <label>Cena:</label> {props.price} zł
+                  <label>Cena:</label> {val.price} zł
                 </p>
                 <label>Opis:</label>
-                <div className="description">{props.description}</div>
+                <div className="description">{val.description}</div>
               </div>
             </div>
           </BrowserRouter>
@@ -39,4 +41,10 @@ class ProductInfo extends Component {
   }
 }
 
-export default ProductInfo;
+function mapStateToProps(state) {
+  return {
+    products: state.products
+  }
+}
+
+export default connect(mapStateToProps)(ProductInfo);

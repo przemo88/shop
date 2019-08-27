@@ -9,6 +9,7 @@ import Regulations from "./components/Regulations/Regulations";
 import Contact from "./components/Contact/Contact";
 import ProductInfo from "./components/ProductInfo/ProductInfo";
 import NoMatch from "./components/NoMatch/NoMatch";
+import SingleProduct from "./components/SingleProduct/SingleProduct";
 
 class App extends Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class App extends Component {
             <Route exact path={"/"} component={Home} />
             <Route exact path={"/faq"} component={Faq} />
             <Route exact path={"/product"} component={ProductInfo} />
+            <Route exact path={"/product/:id"} component={SingleProduct} />
             <Route exact path={"/regulations"} component={Regulations} />
             <Route exact path={"/contact"} component={Contact} />
             <Route component={NoMatch} />
