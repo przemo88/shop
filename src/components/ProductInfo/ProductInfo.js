@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { NavLink, BrowserRouter, Route } from "react-router-dom";
-import { ProductDetails } from "../ProductDetails/ProductDetails";
 import data from "../../data/data";
 import styles from "./ProductInfo.css";
-import { connect } from 'react-redux';
-import { SingleProduct } from "../SingleProduct/SingleProduct";
+import SingleProduct from '../SingleProduct/SingleProduct';
 
 class ProductInfo extends Component {
   constructor(props) {
@@ -41,10 +39,4 @@ class ProductInfo extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    products: state.products
-  }
-}
-
-export default connect(mapStateToProps)(ProductInfo);
+export default ProductInfo;
